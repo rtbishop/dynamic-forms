@@ -1,0 +1,3 @@
+If you are running this tool locally please first exit Chrome and then run the "CORS.bat" file.
+This will re-launch Chrome with arguments to disable CORS policy.
+Without CORS disabled, you will not be able to load the JSON stub data.

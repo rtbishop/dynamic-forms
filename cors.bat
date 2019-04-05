@@ -1,0 +1,1 @@
+cmd /k "cd %ProgramFiles(x86)%\Google\Chrome\Application && chrome --allow-file-access-from-files && exit"

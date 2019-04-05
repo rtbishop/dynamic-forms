@@ -1,0 +1,91 @@
+{
+    "providerAccount": [
+        {
+            "id": 1000000,
+            "aggregationSource": "USER",
+            "providerId": 16442,
+            "isManual": false,
+            "createdDate": "2019-01-15T00:23:42Z",
+            "status": "USER_INPUT_REQUIRED",
+            "dataset": [
+                {
+                    "name": "BASIC_AGG_DATA",
+                    "updateEligibility": "DISALLOW_UPDATE"
+                }
+            ],
+            "loginForm": [
+                {
+                    "mfaTimeout": 125000,
+                    "formType": "questionAndAnswer",
+                    "row": [
+                        {
+                            "id": "SQandA--ANSWER_METADATA0--Row--1",
+                            "label": "Send Code to",
+                            "fieldRowChoice": "0001",
+                            "form": "0001",
+                            "field": [
+                                {
+                                    "id": "SQandA--ANSWER_METADATA0--1",
+                                    "name": "ANSWER_METADATA0",
+                                    "isOptional": false,
+                                    "value": "",
+                                    "option": [
+                                        {
+                                            "isSelected": "true",
+                                            "optionValue": "Mob:+91-999123234",
+                                            "displayText": "Mob:+91-999123234"
+                                        },
+                                        {
+                                            "isSelected": "false",
+                                            "optionValue": "Home:+91-9000000000",
+                                            "displayText": "Home:+91-9000000000"
+                                        },
+                                        {
+                                            "isSelected": "false",
+                                            "optionValue": "Work:080-40003456",
+                                            "displayText": "Work:080-40003456"
+                                        }
+                                    ],
+                                    "valueEditable": "true",
+                                    "type": "options"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "SQandA--ANSWER_METADATA1--Row--2",
+                            "label": "Delivery method",
+                            "fieldRowChoice": "0002",
+                            "form": "0001",
+                            "field": [
+                                {
+                                    "id": "SQandA--ANSWER_METADATA1--2",
+                                    "name": "ANSWER_METADATA1",
+                                    "isOptional": false,
+                                    "value": "",
+                                    "option": [
+                                        {
+                                            "isSelected": "true",
+                                            "optionValue": "TEXT",
+                                            "displayText": "TEXT"
+                                        },
+                                        {
+                                            "isSelected": "false",
+                                            "optionValue": "PHONE",
+                                            "displayText": "PHONE"
+                                        }
+                                    ],
+                                    "valueEditable": "true",
+                                    "type": "options"
+                                }
+                            ]
+                        }
+                    ],
+                    "mfaInfoText": "MFA Info Content1",
+                    "mfaInfoTitle": "MFA Info Title1",
+                    "mfaHelpText": "MFA Help Content1",
+                    "mfaHelpTitle": "MFA Help Title1"
+                }
+            ]
+        }
+    ]
+}

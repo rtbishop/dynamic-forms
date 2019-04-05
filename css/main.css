@@ -1,0 +1,60 @@
+#providers, #mfa-providers {
+	max-width: 600px;
+}
+
+#app {
+    max-width: 600px;
+}
+
+.provider-tile {
+    max-height: 95px !important;
+}
+
+.provider-link {
+    display: inline-block !important;
+    width: 100% !important;
+    height: 100% !important;
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.provider-logo {
+    height: 1rem !important;
+}
+
+.provider-logo-lg {
+	height: 1.7rem !important;
+}
+
+.provider-logo-md {
+    height: 1.5rem !important;
+}
+
+.provider-json {
+    font-size: 0.7rem !important;
+    height: 150px !important;
+}
+
+.provider-json-lg {
+    font-size: 0.7rem !important;
+    height: 300px !important;
+}
+
+.provider-json-md {
+    font-size: 0.7rem !important;
+    height: 100px !important;
+}
+
+.provider-json-sm {
+    font-size: 0.7rem !important;
+    height: 75px !important;
+}
+
+.small-text {
+    font-size: 0.9rem !important;
+}
+
+.xs-text {
+    font-size: 0.85rem !important;
+}
+

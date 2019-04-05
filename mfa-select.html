@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Envestnet | Yodlee - Dynamic Form Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="select.html">
+            <img src="http://solutions.yodlee.com/rs/789-EJH-884/images/ENV_Yodlee_Color_Logo_539x18.png" width="100px" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="select.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mfa-select.html">MFA Samples</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="mfa-providers" class="container">
+    <div class="row mb-2 mt-5">
+        <h4>Select a Bank (MFA)</h4>
+    </div>
+    <div class="row text-center align-items-center mb-2" v-for="i in Math.ceil(mfaProviders.length / 3)">
+        <div v-for="mfaProvider in mfaProviders.slice((i - 1) * 3, i * 3)" v-if="mfaProvider.type !== null" class="provider-tile col-sm m-2 shadow p-4 mb-4 bg-white rounded my-auto">
+            <a :href="'mfa-login.html?type='+mfaProvider.type" class="provider-link">
+                <img src="http://solutions.yodlee.com/rs/789-EJH-884/images/ENV_Yodlee_Color_Logo_539x18.png" class="provider-logo-md">
+                <p class="xs-text">{{ mfaProvider.name }}</p>
+            </a>
+        </div>
+        <div v-else class="provider-tile col-sm m-2 p-4 mb-4 my-auto"></div>
+    </div>
+</div>
+
+<script>
+var mfaProviders = new Vue({
+    el: '#mfa-providers',
+    data: {
+        mfaProviders: [
+            { 'type': 'token', 'name': 'Token' },
+            { 'type': 'secqa', 'name': 'Security Q&A' },
+            { 'type': 'captcha', 'name': 'CAPTCHA' },
+            { 'type': 'radio', 'name': 'Multilevel: Radio Button' },
+            { 'type': 'dropdown', 'name': 'Multilevel: Drop-Down' },
+            { 'type': null, 'name': null },
+        ]
+    }
+})
+</script>
+</body>
+</html>

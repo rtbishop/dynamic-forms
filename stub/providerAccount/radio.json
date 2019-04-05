@@ -1,0 +1,63 @@
+{
+    "providerAccount": [
+        {
+            "id": 1000000,
+            "aggregationSource": "USER",
+            "providerId": 16442,
+            "isManual": false,
+            "createdDate": "2019-01-15T00:25:28Z",
+            "status": "USER_INPUT_REQUIRED",
+            "dataset": [
+                {
+                    "name": "BASIC_AGG_DATA",
+                    "updateEligibility": "DISALLOW_UPDATE"
+                }
+            ],
+            "loginForm": [
+                {
+                    "mfaTimeout": 125000,
+                    "formType": "questionAndAnswer",
+                    "row": [
+                        {
+                            "id": "SQandA--ANSWER_METADATA0--Row--1",
+                            "label": "Send OTP Code to",
+                            "fieldRowChoice": "0001",
+                            "form": "0001",
+                            "field": [
+                                {
+                                    "id": "SQandA--ANSWER_METADATA0--1",
+                                    "name": "ANSWER_METADATA0",
+                                    "isOptional": false,
+                                    "value": "",
+                                    "option": [
+                                        {
+                                            "isSelected": "true",
+                                            "optionValue": "Email izX-XXX.gmail.com",
+                                            "displayText": "Email izX-XXX.gmail.com"
+                                        },
+                                        {
+                                            "isSelected": "false",
+                                            "optionValue": "Work XXX-XXX-8137",
+                                            "displayText": "Work XXX-XXX-8137"
+                                        },
+                                        {
+                                            "isSelected": "false",
+                                            "optionValue": "Home XXX-XXX-8137",
+                                            "displayText": "Home XXX-XXX-8137"
+                                        }
+                                    ],
+                                    "valueEditable": "true",
+                                    "type": "radio"
+                                }
+                            ]
+                        }
+                    ],
+                    "mfaInfoText": "MFA Info Content1",
+                    "mfaInfoTitle": "MFA Info Title1",
+                    "mfaHelpText": "MFA Help Content1",
+                    "mfaHelpTitle": "MFA Help Title1"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "providerAccount": [
+        {
+            "id": 1000000,
+            "aggregationSource": "USER",
+            "providerId": 16486,
+            "isManual": false,
+            "createdDate": "2019-01-14T22:56:44Z",
+            "status": "USER_INPUT_REQUIRED",
+            "dataset": [
+                {
+                    "name": "BASIC_AGG_DATA",
+                    "updateEligibility": "DISALLOW_UPDATE"
+                }
+            ],
+            "loginForm": [
+                {
+                    "mfaTimeout": 125000,
+                    "formType": "questionAndAnswer",
+                    "row": [
+                        {
+                            "id": "SQandA--QUESTION_1--Row--1",
+                            "label": "What is the name of your state?",
+                            "fieldRowChoice": "0001",
+                            "form": "0001",
+                            "field": [
+                                {
+                                    "id": "SQandA--QUESTION_1--1",
+                                    "name": "QUESTION_1",
+                                    "isOptional": false,
+                                    "value": "Enter the answer",
+                                    "valueEditable": "true",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "SQandA--QUESTION_2--Row--2",
+                            "label": "What is the name of your first school?",
+                            "fieldRowChoice": "0002",
+                            "form": "0001",
+                            "field": [
+                                {
+                                    "id": "SQandA--QUESTION_2--2",
+                                    "name": "QUESTION_2",
+                                    "isOptional": false,
+                                    "value": "Enter the answer",
+                                    "valueEditable": "true",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

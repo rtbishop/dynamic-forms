@@ -1,0 +1,72 @@
+{
+    "provider": [
+        {
+            "id": 15919,
+            "name": "DagBankCaptcha",
+            "loginUrl": "http://dag2.yodlee.com/dag/index.do",
+            "baseUrl": "http://dag2.yodlee.com/dag/index.do",
+            "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_Default.SVG",
+            "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_15919_50_1.PNG",
+            "status": "Supported",
+            "isAutoRefreshEnabled": true,
+            "authType": "MFA_CREDENTIALS",
+            "lastModified": "2018-02-07T13:11:20Z",
+            "languageISOCode": "EN",
+            "primaryLanguageISOCode": "EN",
+            "loginForm": [
+                {
+                    "id": 15599,
+                    "forgetPasswordURL": "http://dag2.yodlee.com/dag/index.do",
+                    "formType": "login",
+                    "row": [
+                        {
+                            "id": 146590,
+                            "label": "Catalog",
+                            "form": "0001",
+                            "fieldRowChoice": "0001",
+                            "field": [
+                                {
+                                    "id": 64311,
+                                    "name": "LOGIN",
+                                    "type": "text",
+                                    "value": "",
+                                    "isOptional": false,
+                                    "valueEditable": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": 146591,
+                            "label": "Password",
+                            "form": "0001",
+                            "fieldRowChoice": "0002",
+                            "field": [
+                                {
+                                    "id": 64310,
+                                    "name": "PASSWORD",
+                                    "type": "password",
+                                    "value": "",
+                                    "isOptional": false,
+                                    "valueEditable": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "dataset": [
+                {
+                    "name": "BASIC_AGG_DATA",
+                    "attribute": [
+                        {
+                            "name": "BASIC_ACCOUNT_INFO",
+                            "container": [
+                                "bank"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

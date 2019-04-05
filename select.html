@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Envestnet | Yodlee - Dynamic Form Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script> -->
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="select.html">
+            <img src="http://solutions.yodlee.com/rs/789-EJH-884/images/ENV_Yodlee_Color_Logo_539x18.png" width="100px" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="select.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mfa-select.html">MFA Samples</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="providers" class="container">
+    <div class="row mb-2 mt-5">
+        <h4>Select a Bank (non-MFA)</h4>
+    </div>
+    <div class="row text-center align-items-center mb-2" v-for="i in Math.ceil(providers.length / 3)">
+        <div v-for="provider in providers.slice((i - 1) * 3, i * 3)" v-if="provider.id > 0" class="provider-tile col-sm m-2 shadow p-4 mb-4 bg-white rounded my-auto">
+            <a :href="'login.html?providerId='+provider.id" class="provider-link">
+            <!-- <router-link :to="'/providers/'+provider.id" class="provider-link"> -->
+                <img :src="provider.logo" class="provider-logo">
+                <p>{{ provider.name }}</p>
+            <!-- </router-link> -->
+            </a>
+        </div>
+        <div v-else class="provider-tile col-sm m-2 p-4 mb-4 my-auto"></div>
+    </div>
+
+    <router-view></router-view>
+</div>
+
+<script>
+// const Foo = { template: '<div>foo {{ $route.params.id }}</div>' }
+// const routes = [
+//   { path: '/providers/:id', component: Foo }
+// ]
+// const router = new VueRouter({
+//   routes
+// })
+var providers = new Vue({
+    //router,
+    el: '#providers',
+    data: {
+        providers: [
+            { 'id': 5, 'name': 'Wells Fargo', 'logo': 'https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_5_1_2.SVG' },
+            { 'id': 2852, 'name': 'Bank of America', 'logo': 'https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_2852_1_2.SVG' },
+            { 'id': 3278, 'name': 'USAA', 'logo': 'https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_3278_1_2.SVG' },
+            { 'id': 3200, 'name': 'American Funds', 'logo': 'https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_3200_1_2.SVG' },
+            { 'id': 2162, 'name': 'PNC Bank', 'logo': 'https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_2162_1_2.SVG' },
+            { 'id': 3589, 'name': 'Sallie Mae', 'logo': 'https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_3589_1_1.PNG' },
+            { 'id': 744, 'name': 'E*TRADE', 'logo': 'https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_744_1_2.SVG' },
+            { 'id': 0, 'name': null, 'logo': null },
+            { 'id': 0, 'name': null, 'logo': null }
+        ]
+    }
+})
+</script>
+</body>
+</html>
