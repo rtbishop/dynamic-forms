@@ -1,127 +1,155 @@
 {
-  "provider": [
-    {
-      "id": 744,
-      "name": "E*TRADE",
-      "loginUrl": "https://us.etrade.com/e/t/user/login",
-      "baseUrl": "https://us.etrade.com",
-      "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_744.SVG",
-      "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_744_1_2.SVG",
-      "status": "Supported",
-      "isAutoRefreshEnabled": true,
-      "help": "If you are a registered user and use a security token: <br> <p> <ol> <li> Enter your registered user ID and password.</li> <li> Select Password and Token from the drop-down menu. <br> • A pop up appears <li> Enter your security code </li> </ol> If you are a registered user but do not use a security token: <br> <ol> <li> Enter your user ID and password </li> <li> Select Password Only option the drop-down menu. </li> </ol> </p>",
-      "authType": "MFA_CREDENTIALS",
-      "lastModified": "2018-09-03T04:18:29Z",
-      "languageISOCode": "EN",
-      "primaryLanguageISOCode": "EN",
-      "countryISOCode": "US",
-      "loginForm": [
+    "provider": [
         {
-          "id": 445,
-          "forgetPasswordURL": "https://express.etrade.com/e/t/user/resetpassword",
-          "formType": "login",
-          "row": [
-            {
-              "id": 4736,
-              "label": "User ID",
-              "form": "0001",
-              "fieldRowChoice": "0001",
-              "field": [
+            "id": 744,
+            "name": "E*TRADE",
+            "loginUrl": "https://us.etrade.com/e/t/user/login",
+            "baseUrl": "https://us.etrade.com",
+            "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_744.SVG",
+            "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_744_1_2.SVG",
+            "status": "Supported",
+            "isConsentRequired": false,
+            "isAutoRefreshEnabled": true,
+            "help": "If you are a registered user and use a security token: <br> <p> <ol> <li> Enter your registered user ID and password.</li> <li> Select Password and Token from the drop-down menu. <br> • A pop up appears <li> Enter your security code </li> </ol> If you are a registered user but do not use a security token: <br> <ol> <li> Enter your user ID and password </li> <li> Select Password Only option the drop-down menu. </li> </ol> </p>",
+            "authType": "MFA_CREDENTIALS",
+            "lastModified": "2019-10-30T11:40:25Z",
+            "languageISOCode": "EN",
+            "primaryLanguageISOCode": "EN",
+            "countryISOCode": "US",
+            "loginForm": [
                 {
-                  "id": 689,
-                  "name": "LOGIN",
-                  "type": "text",
-                  "value": "",
-                  "isOptional": false,
-                  "valueEditable": true
+                    "id": 445,
+                    "forgetPasswordURL": "https://express.etrade.com/e/t/user/resetpassword",
+                    "formType": "login",
+                    "row": [
+                        {
+                            "id": 4736,
+                            "label": "User ID",
+                            "form": "0001",
+                            "fieldRowChoice": "0001",
+                            "field": [
+                                {
+                                    "id": 689,
+                                    "name": "LOGIN",
+                                    "type": "text",
+                                    "value": "",
+                                    "isOptional": false,
+                                    "valueEditable": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": 12023,
+                            "label": "Password",
+                            "form": "0001",
+                            "fieldRowChoice": "0002",
+                            "field": [
+                                {
+                                    "id": 690,
+                                    "name": "PASSWORD",
+                                    "type": "password",
+                                    "value": "",
+                                    "isOptional": false,
+                                    "valueEditable": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": 159365,
+                            "label": "Login with security device OR password",
+                            "form": "0001",
+                            "fieldRowChoice": "0003",
+                            "field": [
+                                {
+                                    "id": 73858,
+                                    "name": "OPTION",
+                                    "type": "option",
+                                    "value": "",
+                                    "isOptional": false,
+                                    "valueEditable": true,
+                                    "option": [
+                                        {
+                                            "optionValue": "passwords",
+                                            "displayText": "Password Only"
+                                        },
+                                        {
+                                            "optionValue": "token",
+                                            "displayText": "Password and Token"
+                                        },
+                                        {
+                                            "optionValue": "SecureCode",
+                                            "displayText": "Password or Secure code"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "id": 12023,
-              "label": "Password",
-              "form": "0001",
-              "fieldRowChoice": "0002",
-              "field": [
+            ],
+            "capability": [
                 {
-                  "id": 690,
-                  "name": "PASSWORD",
-                  "type": "password",
-                  "value": "",
-                  "isOptional": false,
-                  "valueEditable": true
+                    "name": "CHALLENGE_DEPOSIT_VERIFICATION",
+                    "container": [
+                        "bank",
+                        "investment"
+                    ]
                 }
-              ]
-            },
-            {
-              "id": 159365,
-              "label": "Login with security device OR password",
-              "form": "0001",
-              "fieldRowChoice": "0003",
-              "field": [
+            ],
+            "dataset": [
                 {
-                  "id": 73858,
-                  "name": "OPTION",
-                  "type": "option",
-                  "value": "",
-                  "isOptional": false,
-                  "valueEditable": true,
-                  "option": [
-                    {
-                      "optionValue": "passwords",
-                      "displayText": "Password Only"
-                    },
-                    {
-                      "optionValue": "token",
-                      "displayText": "Password and Token"
-                    },
-                    {
-                      "optionValue": "SecureCode",
-                      "displayText": "Password or Secure code"
-                    }
-                  ]
+                    "name": "BASIC_AGG_DATA",
+                    "attribute": [
+                        {
+                            "name": "ACCOUNT_DETAILS",
+                            "container": [
+                                "bank",
+                                "loan",
+                                "investment"
+                            ]
+                        },
+                        {
+                            "name": "HOLDINGS",
+                            "container": [
+                                "investment"
+                            ]
+                        },
+                        {
+                            "name": "STATEMENTS",
+                            "container": [
+                                "loan"
+                            ]
+                        },
+                        {
+                            "name": "TRANSACTIONS",
+                            "containerAttributes": {
+                                "BANK": {
+                                    "numberOfTransactionDays": 90
+                                },
+                                "LOAN": {
+                                    "numberOfTransactionDays": 90
+                                },
+                                "INVESTMENT": {
+                                    "numberOfTransactionDays": 90
+                                }
+                            },
+                            "container": [
+                                "bank",
+                                "loan",
+                                "investment"
+                            ]
+                        },
+                        {
+                            "name": "BASIC_ACCOUNT_INFO",
+                            "container": [
+                                "loan",
+                                "bank",
+                                "investment"
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ]
         }
-      ],
-      "dataset": [
-        {
-          "name": "ACCT_PROFILE",
-          "attribute": [
-            {
-              "name": "FULL_ACCT_NUMBER",
-              "container": [
-                "bank"
-              ]
-            },
-            {
-              "name": "BANK_TRANSFER_CODE",
-              "container": [
-                "bank"
-              ]
-            },
-            {
-              "name": "HOLDER_NAME",
-              "container": [
-                "bank"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "BASIC_AGG_DATA",
-          "attribute": [
-            {
-              "name": "BASIC_ACCOUNT_INFO",
-              "container": [
-                "bank"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 }

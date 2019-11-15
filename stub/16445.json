@@ -8,9 +8,10 @@
             "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_Default.SVG",
             "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_16445_1_1.PNG",
             "status": "Supported",
+            "isConsentRequired": false,
             "isAutoRefreshEnabled": false,
             "authType": "MFA_CREDENTIALS",
-            "lastModified": "2018-10-19T10:25:00Z",
+            "lastModified": "2018-03-06T06:41:00Z",
             "languageISOCode": "EN",
             "primaryLanguageISOCode": "EN",
             "countryISOCode": "US",
@@ -55,10 +56,51 @@
                     ]
                 }
             ],
+            "capability": [
+                {
+                    "name": "CHALLENGE_DEPOSIT_VERIFICATION",
+                    "container": [
+                        "bank"
+                    ]
+                }
+            ],
             "dataset": [
                 {
                     "name": "BASIC_AGG_DATA",
                     "attribute": [
+                        {
+                            "name": "ACCOUNT_DETAILS",
+                            "container": [
+                                "bank"
+                            ]
+                        },
+                        {
+                            "name": "HOLDINGS",
+                            "container": [
+                                "insurance"
+                            ]
+                        },
+                        {
+                            "name": "STATEMENTS",
+                            "container": [
+                                "insurance"
+                            ]
+                        },
+                        {
+                            "name": "TRANSACTIONS",
+                            "containerAttributes": {
+                                "INSURANCE": {
+                                    "numberOfTransactionDays": 90
+                                },
+                                "BANK": {
+                                    "numberOfTransactionDays": 90
+                                }
+                            },
+                            "container": [
+                                "insurance",
+                                "bank"
+                            ]
+                        },
                         {
                             "name": "BASIC_ACCOUNT_INFO",
                             "container": [

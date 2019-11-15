@@ -8,9 +8,10 @@
             "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_Default.SVG",
             "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_15919_50_1.PNG",
             "status": "Supported",
+            "isConsentRequired": false,
             "isAutoRefreshEnabled": true,
             "authType": "MFA_CREDENTIALS",
-            "lastModified": "2018-02-07T13:11:20Z",
+            "lastModified": "2018-02-07T13:09:00Z",
             "languageISOCode": "EN",
             "primaryLanguageISOCode": "EN",
             "loginForm": [
@@ -54,10 +55,35 @@
                     ]
                 }
             ],
+            "capability": [
+                {
+                    "name": "CHALLENGE_DEPOSIT_VERIFICATION",
+                    "container": [
+                        "bank"
+                    ]
+                }
+            ],
             "dataset": [
                 {
                     "name": "BASIC_AGG_DATA",
                     "attribute": [
+                        {
+                            "name": "ACCOUNT_DETAILS",
+                            "container": [
+                                "bank"
+                            ]
+                        },
+                        {
+                            "name": "TRANSACTIONS",
+                            "containerAttributes": {
+                                "BANK": {
+                                    "numberOfTransactionDays": 90
+                                }
+                            },
+                            "container": [
+                                "bank"
+                            ]
+                        },
                         {
                             "name": "BASIC_ACCOUNT_INFO",
                             "container": [

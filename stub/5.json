@@ -1,124 +1,135 @@
-{  
-  "provider":[  
-    {  
-      "id":5,
-      "name":"Wells Fargo",
-      "loginUrl":"https://connect.secure.wellsfargo.com/auth/login/present?origin=yodlee",
-      "baseUrl":"https://www.wellsfargo.com/",
-      "favicon":"https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_5.SVG",
-      "logo":"https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_5_1_2.SVG",
-      "status":"Supported",
-      "isAutoRefreshEnabled":true,
-      "authType":"MFA_CREDENTIALS",
-      "lastModified":"2018-09-26T12:45:57Z",
-      "languageISOCode":"EN",
-      "primaryLanguageISOCode":"EN",
-      "countryISOCode":"US",
-      "loginForm":[  
-        {  
-          "id":5,
-          "forgetPasswordURL":"https://online.wellsfargo.com/das/cgi-bin/session.cgi?screenid=PASSWORD_HELP",
-          "loginHelp":"To log in successfully, please ensure following conditions are satisfied for your username at Wells Fargo.<br> Your Username: <p><ol> <li>Must be <strong>6 to 14 characters</strong> in length and including at least one letter.</li> <li>Cannot contain 9 or more numbers</li> <li>Must not contain <strong>Special Characters</strong> other than hyphens (-) or underscores (_)</li> <li>Must be different than your password, ATM PIN, or Social Security number, and not easy for others to guess!</li> </p> </ol>",
-          "formType":"login",
-          "row":[  
-            {  
-              "id":121254,
-              "label":"Username",
-              "form":"0001",
-              "fieldRowChoice":"0001",
-              "field":[  
-                {  
-                  "id":12,
-                  "name":"LOGIN",
-                  "size":20,
-                  "maxLength":14,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            },
-            {  
-              "id":121253,
-              "label":"Password",
-              "form":"0001",
-              "fieldRowChoice":"0002",
-              "field":[  
-                {  
-                  "id":13,
-                  "name":"PASSWORD",
-                  "size":20,
-                  "maxLength":32,
-                  "type":"password",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            }
+{
+  "provider": [
+      {
+          "id": 5,
+          "name": "Wells Fargo",
+          "loginUrl": "https://connect.secure.wellsfargo.com/auth/login/present?origin=yodlee",
+          "baseUrl": "https://www.wellsfargo.com/",
+          "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_5.SVG",
+          "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_5_1_2.SVG",
+          "status": "Supported",
+          "isConsentRequired": false,
+          "isAutoRefreshEnabled": true,
+          "authType": "MFA_CREDENTIALS",
+          "lastModified": "2019-11-12T09:27:00Z",
+          "languageISOCode": "EN",
+          "primaryLanguageISOCode": "EN",
+          "countryISOCode": "US",
+          "loginForm": [
+              {
+                  "id": 5,
+                  "forgetPasswordURL": "https://oam.wellsfargo.com/oamo/identity/help/passwordhelp",
+                  "loginHelp": "If you are unable to add this external account, ensure your mobile number is registered or up-to-date with Wells Fargo. To register or update your phone number online, navigate to your profile in the Wells Fargo site, and select My profile > Update Contact Information > Phone Numbers. You can also call Wells Fargo support to register your phone number.",
+                  "formType": "login",
+                  "row": [
+                      {
+                          "id": 121254,
+                          "label": "Username",
+                          "form": "0001",
+                          "fieldRowChoice": "0001",
+                          "field": [
+                              {
+                                  "id": 12,
+                                  "name": "LOGIN",
+                                  "size": 20,
+                                  "maxLength": 14,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      },
+                      {
+                          "id": 121253,
+                          "label": "Password",
+                          "form": "0001",
+                          "fieldRowChoice": "0002",
+                          "field": [
+                              {
+                                  "id": 13,
+                                  "name": "PASSWORD",
+                                  "size": 20,
+                                  "maxLength": 32,
+                                  "type": "password",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "capability": [
+              {
+                  "name": "CHALLENGE_DEPOSIT_VERIFICATION",
+                  "container": [
+                      "bank"
+                  ]
+              }
+          ],
+          "dataset": [
+              {
+                  "name": "BASIC_AGG_DATA",
+                  "attribute": [
+                      {
+                          "name": "ACCOUNT_DETAILS",
+                          "container": [
+                              "bank",
+                              "loan",
+                              "investment",
+                              "creditCard"
+                          ]
+                      },
+                      {
+                          "name": "HOLDINGS",
+                          "container": [
+                              "investment"
+                          ]
+                      },
+                      {
+                          "name": "STATEMENTS",
+                          "container": [
+                              "loan",
+                              "creditCard"
+                          ]
+                      },
+                      {
+                          "name": "TRANSACTIONS",
+                          "containerAttributes": {
+                              "BANK": {
+                                  "numberOfTransactionDays": 90
+                              },
+                              "LOAN": {
+                                  "numberOfTransactionDays": 90
+                              },
+                              "INVESTMENT": {
+                                  "numberOfTransactionDays": 90
+                              },
+                              "CREDITCARD": {
+                                  "numberOfTransactionDays": 90
+                              }
+                          },
+                          "container": [
+                              "bank",
+                              "loan",
+                              "investment",
+                              "creditCard"
+                          ]
+                      },
+                      {
+                          "name": "BASIC_ACCOUNT_INFO",
+                          "container": [
+                              "bank",
+                              "loan",
+                              "investment",
+                              "creditCard"
+                          ]
+                      }
+                  ]
+              }
           ]
-        }
-      ],
-      "dataset":[  
-        {  
-          "name":"BASIC_AGG_DATA",
-          "attribute":[  
-            {  
-              "name":"ACCOUNT_DETAILS",
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"TRANSACTIONS",
-              "containerAttributes":{  
-                "BANK":{  
-                  "numberOfTransactionDays":90
-                }
-              },
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"BASIC_ACCOUNT_INFO",
-              "container":[  
-                "bank"
-              ]
-            }
-          ]
-        },
-        {  
-          "name":"ACCT_PROFILE",
-          "attribute":[  
-            {  
-              "name":"FULL_ACCT_NUMBER",
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"BANK_TRANSFER_CODE",
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"HOLDER_NAME",
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"HOLDER_DETAILS",
-              "container":[  
-                "bank"
-              ]
-            }
-          ]
-        }
-      ]
-    }
+      }
   ]
 }

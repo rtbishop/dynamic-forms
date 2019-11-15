@@ -1,119 +1,131 @@
-{  
-  "provider":[  
-    {  
-      "id":2162,
-      "name":"PNC Bank",
-      "loginUrl":"https://www.onlinebanking.pnc.com/alservlet/SignonInitServlet?HttpLevel=128",
-      "baseUrl":"https://www.pnc.com/en/personal-banking.html",
-      "favicon":"https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_2162.SVG",
-      "logo":"https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_2162_1_2.SVG",
-      "status":"Supported",
-      "isAutoRefreshEnabled":true,
-      "authType":"MFA_CREDENTIALS",
-      "lastModified":"2018-12-07T13:09:17Z",
-      "languageISOCode":"EN",
-      "primaryLanguageISOCode":"EN",
-      "countryISOCode":"US",
-      "loginForm":[  
-        {  
-          "id":1623,
-          "forgetPasswordURL":"https://www.onlinebanking.pnc.com/alservlet/ForgotUserIdServlet",
-          "formType":"login",
-          "row":[  
-            {  
-              "id":150205,
-              "label":"User ID",
-              "form":"0001",
-              "fieldRowChoice":"0001",
-              "field":[  
-                {  
-                  "id":2245,
-                  "name":"LOGIN",
-                  "type":"text",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            },
-            {  
-              "id":150203,
-              "label":"PIN/Password",
-              "form":"0001",
-              "fieldRowChoice":"0002",
-              "field":[  
-                {  
-                  "id":2247,
-                  "name":"PASSWORD",
-                  "type":"password",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            }
+{
+  "provider": [
+      {
+          "id": 2162,
+          "name": "PNC Bank",
+          "loginUrl": "https://www.onlinebanking.pnc.com/alservlet/SignonInitServlet?HttpLevel=128",
+          "baseUrl": "https://www.pnc.com/en/personal-banking.html",
+          "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_2162.SVG",
+          "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_2162_1_2.SVG",
+          "status": "Supported",
+          "isConsentRequired": false,
+          "isAutoRefreshEnabled": false,
+          "help": "<body><b>If you do not have a registered mobile number with PNC, then please sign on to PNC Online Banking to enroll a mobile number first.</b><br> Once done, you may proceed to complete your account link request using a one-time passcode to verify account ownership.</body>",
+          "authType": "MFA_CREDENTIALS",
+          "lastModified": "2019-11-12T19:10:58Z",
+          "languageISOCode": "EN",
+          "primaryLanguageISOCode": "EN",
+          "countryISOCode": "US",
+          "loginForm": [
+              {
+                  "id": 1623,
+                  "forgetPasswordURL": "https://www.onlinebanking.pnc.com/alservlet/ForgotUserIdServlet",
+                  "formType": "login",
+                  "row": [
+                      {
+                          "id": 150205,
+                          "label": "User ID",
+                          "form": "0001",
+                          "fieldRowChoice": "0001",
+                          "field": [
+                              {
+                                  "id": 2245,
+                                  "name": "LOGIN",
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      },
+                      {
+                          "id": 150203,
+                          "label": "PIN/Password",
+                          "form": "0001",
+                          "fieldRowChoice": "0002",
+                          "field": [
+                              {
+                                  "id": 2247,
+                                  "name": "PASSWORD",
+                                  "type": "password",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "capability": [
+              {
+                  "name": "CHALLENGE_DEPOSIT_VERIFICATION",
+                  "container": [
+                      "bank"
+                  ]
+              }
+          ],
+          "dataset": [
+              {
+                  "name": "BASIC_AGG_DATA",
+                  "attribute": [
+                      {
+                          "name": "ACCOUNT_DETAILS",
+                          "container": [
+                              "bank",
+                              "loan",
+                              "investment",
+                              "creditCard"
+                          ]
+                      },
+                      {
+                          "name": "HOLDINGS",
+                          "container": [
+                              "investment"
+                          ]
+                      },
+                      {
+                          "name": "STATEMENTS",
+                          "container": [
+                              "loan",
+                              "creditCard"
+                          ]
+                      },
+                      {
+                          "name": "TRANSACTIONS",
+                          "containerAttributes": {
+                              "BANK": {
+                                  "numberOfTransactionDays": 90
+                              },
+                              "LOAN": {
+                                  "numberOfTransactionDays": 90
+                              },
+                              "INVESTMENT": {
+                                  "numberOfTransactionDays": 90
+                              },
+                              "CREDITCARD": {
+                                  "numberOfTransactionDays": 90
+                              }
+                          },
+                          "container": [
+                              "bank",
+                              "loan",
+                              "investment",
+                              "creditCard"
+                          ]
+                      },
+                      {
+                          "name": "BASIC_ACCOUNT_INFO",
+                          "container": [
+                              "loan",
+                              "bank",
+                              "investment",
+                              "creditCard"
+                          ]
+                      }
+                  ]
+              }
           ]
-        }
-      ],
-      "dataset":[  
-        {  
-          "name":"ACCT_PROFILE",
-          "attribute":[  
-            {  
-              "name":"FULL_ACCT_NUMBER",
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"BANK_TRANSFER_CODE",
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"HOLDER_NAME",
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"HOLDER_DETAILS",
-              "container":[  
-                "bank"
-              ]
-            }
-          ]
-        },
-        {  
-          "name":"BASIC_AGG_DATA",
-          "attribute":[  
-            {  
-              "name":"ACCOUNT_DETAILS",
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"TRANSACTIONS",
-              "containerAttributes":{  
-                "BANK":{  
-                  "numberOfTransactionDays":90
-                }
-              },
-              "container":[  
-                "bank"
-              ]
-            },
-            {  
-              "name":"BASIC_ACCOUNT_INFO",
-              "container":[  
-                "bank"
-              ]
-            }
-          ]
-        }
-      ]
-    }
+      }
   ]
 }

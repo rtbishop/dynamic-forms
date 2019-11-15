@@ -1,201 +1,202 @@
-{  
-  "provider":[  
-    {  
-      "id":3589,
-      "name":"Sallie Mae",
-      "loginUrl":"https://login.salliemae.com/CALM/calm.do?sourceAppName=SLMACOM",
-      "baseUrl":"http://www.salliemae.com/",
-      "favicon":"https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_3589.PNG",
-      "logo":"https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_3589_1_1.PNG",
-      "status":"Supported",
-      "isAutoRefreshEnabled":true,
-      "authType":"CREDENTIALS",
-      "lastModified":"2016-06-06T11:55:41Z",
-      "languageISOCode":"EN",
-      "primaryLanguageISOCode":"EN",
-      "countryISOCode":"US",
-      "loginForm":[  
-        {  
-          "id":2748,
-          "forgetPasswordURL":"https://login.salliemae.com/CALM/ForgotPassword.do",
-          "formType":"login",
-          "row":[  
-            {  
-              "id":145697,
-              "label":"User ID",
-              "form":"0001",
-              "fieldRowChoice":"0001",
-              "field":[  
-                {  
-                  "id":3979,
-                  "name":"LOGIN",
-                  "maxLength":62,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            },
-            {  
-              "id":145696,
-              "label":"Password",
-              "form":"0001",
-              "fieldRowChoice":"0002",
-              "field":[  
-                {  
-                  "id":3980,
-                  "name":"PASSWORD",
-                  "maxLength":32,
-                  "type":"password",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            },
-            {  
-              "id":145683,
-              "label":"Social Security Number",
-              "form":"0001",
-              "fieldRowChoice":"0003 Choice",
-              "field":[  
-                {  
-                  "id":60060,
-                  "name":"OP_LOGIN1",
-                  "maxLength":3,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":true,
-                  "valueEditable":true
-                },
-                {  
-                  "id":60061,
-                  "name":"OP_LOGIN2",
-                  "maxLength":2,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":true,
-                  "valueEditable":true
-                },
-                {  
-                  "id":60062,
-                  "name":"OP_LOGIN3",
-                  "maxLength":4,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":true,
-                  "valueEditable":true
-                }
-              ]
-            },
-            {  
-              "id":145682,
-              "label":"Account Number",
-              "form":"0001",
-              "fieldRowChoice":"0003 Choice",
-              "field":[  
-                {  
-                  "id":60063,
-                  "name":"OP_LOGIN4",
-                  "maxLength":10,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":true,
-                  "valueEditable":true
-                }
-              ]
-            },
-            {  
-              "id":145680,
-              "label":"Date of Birth-mm",
-              "form":"0001",
-              "fieldRowChoice":"0004",
-              "field":[  
-                {  
-                  "id":60086,
-                  "name":"LOGIN5",
-                  "maxLength":2,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            },
-            {  
-              "id":145681,
-              "label":"Date of Birth - dd",
-              "form":"0001",
-              "fieldRowChoice":"0005",
-              "field":[  
-                {  
-                  "id":60064,
-                  "name":"LOGIN6",
-                  "maxLength":2,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            },
-            {  
-              "id":145679,
-              "label":"Date of Birth - YYYY",
-              "form":"0001",
-              "fieldRowChoice":"0006",
-              "field":[  
-                {  
-                  "id":60087,
-                  "name":"LOGIN7",
-                  "maxLength":4,
-                  "type":"text",
-                  "value":"",
-                  "isOptional":false,
-                  "valueEditable":true
-                }
-              ]
-            }
+{
+  "provider": [
+      {
+          "id": 3589,
+          "name": "Sallie Mae",
+          "loginUrl": "https://login.salliemae.com/CALM/calm.do?sourceAppName=SLMACOM",
+          "baseUrl": "http://www.salliemae.com/",
+          "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_3589.PNG",
+          "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_3589_1_1.PNG",
+          "status": "Supported",
+          "isConsentRequired": false,
+          "isAutoRefreshEnabled": true,
+          "authType": "MFA_CREDENTIALS",
+          "lastModified": "2019-04-22T07:34:00Z",
+          "languageISOCode": "EN",
+          "primaryLanguageISOCode": "EN",
+          "countryISOCode": "US",
+          "loginForm": [
+              {
+                  "id": 2748,
+                  "forgetPasswordURL": "https://login.salliemae.com/CALM/ForgotPassword.do",
+                  "formType": "login",
+                  "row": [
+                      {
+                          "id": 145697,
+                          "label": "User ID",
+                          "form": "0001",
+                          "fieldRowChoice": "0001",
+                          "field": [
+                              {
+                                  "id": 3979,
+                                  "name": "LOGIN",
+                                  "maxLength": 62,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      },
+                      {
+                          "id": 145696,
+                          "label": "Password",
+                          "form": "0001",
+                          "fieldRowChoice": "0002",
+                          "field": [
+                              {
+                                  "id": 3980,
+                                  "name": "PASSWORD",
+                                  "maxLength": 32,
+                                  "type": "password",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      },
+                      {
+                          "id": 145683,
+                          "label": "Social Security Number",
+                          "form": "0001",
+                          "fieldRowChoice": "0003 Choice",
+                          "field": [
+                              {
+                                  "id": 60060,
+                                  "name": "OP_LOGIN1",
+                                  "maxLength": 3,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": true,
+                                  "valueEditable": true
+                              },
+                              {
+                                  "id": 60061,
+                                  "name": "OP_LOGIN2",
+                                  "maxLength": 2,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": true,
+                                  "valueEditable": true
+                              },
+                              {
+                                  "id": 60062,
+                                  "name": "OP_LOGIN3",
+                                  "maxLength": 4,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": true,
+                                  "valueEditable": true
+                              }
+                          ]
+                      },
+                      {
+                          "id": 145682,
+                          "label": "Account Number",
+                          "form": "0001",
+                          "fieldRowChoice": "0003 Choice",
+                          "field": [
+                              {
+                                  "id": 60063,
+                                  "name": "OP_LOGIN4",
+                                  "maxLength": 10,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": true,
+                                  "valueEditable": true
+                              }
+                          ]
+                      },
+                      {
+                          "id": 145680,
+                          "label": "Date of Birth-mm",
+                          "form": "0001",
+                          "fieldRowChoice": "0004",
+                          "field": [
+                              {
+                                  "id": 60086,
+                                  "name": "LOGIN5",
+                                  "maxLength": 2,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      },
+                      {
+                          "id": 145681,
+                          "label": "Date of Birth - dd",
+                          "form": "0001",
+                          "fieldRowChoice": "0005",
+                          "field": [
+                              {
+                                  "id": 60064,
+                                  "name": "LOGIN6",
+                                  "maxLength": 2,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      },
+                      {
+                          "id": 145679,
+                          "label": "Date of Birth - YYYY",
+                          "form": "0001",
+                          "fieldRowChoice": "0006",
+                          "field": [
+                              {
+                                  "id": 60087,
+                                  "name": "LOGIN7",
+                                  "maxLength": 4,
+                                  "type": "text",
+                                  "value": "",
+                                  "isOptional": false,
+                                  "valueEditable": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "dataset": [
+              {
+                  "name": "BASIC_AGG_DATA",
+                  "attribute": [
+                      {
+                          "name": "ACCOUNT_DETAILS",
+                          "container": [
+                              "loan"
+                          ]
+                      },
+                      {
+                          "name": "STATEMENTS",
+                          "container": [
+                              "loan"
+                          ]
+                      },
+                      {
+                          "name": "TRANSACTIONS",
+                          "containerAttributes": {
+                              "LOAN": {
+                                  "numberOfTransactionDays": 90
+                              }
+                          },
+                          "container": [
+                              "loan"
+                          ]
+                      },
+                      {
+                          "name": "BASIC_ACCOUNT_INFO",
+                          "container": [
+                              "loan"
+                          ]
+                      }
+                  ]
+              }
           ]
-        }
-      ],
-      "dataset":[  
-        {  
-          "name":"BASIC_AGG_DATA",
-          "attribute":[  
-            {  
-              "name":"ACCOUNT_DETAILS",
-              "container":[  
-                "loan"
-              ]
-            },
-            {  
-              "name":"STATEMENTS",
-              "container":[  
-                "loan"
-              ]
-            },
-            {  
-              "name":"TRANSACTIONS",
-              "containerAttributes":{  
-                "LOAN":{  
-                  "numberOfTransactionDays":90
-                }
-              },
-              "container":[  
-                "loan"
-              ]
-            },
-            {  
-              "name":"BASIC_ACCOUNT_INFO",
-              "container":[  
-                "loan"
-              ]
-            }
-          ]
-        }
-      ]
-    }
+      }
   ]
 }

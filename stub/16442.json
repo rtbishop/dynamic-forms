@@ -8,9 +8,10 @@
             "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_Default.SVG",
             "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_16442_1_1.PNG",
             "status": "Supported",
+            "isConsentRequired": false,
             "isAutoRefreshEnabled": true,
             "authType": "MFA_CREDENTIALS",
-            "lastModified": "2019-01-07T10:55:12Z",
+            "lastModified": "2019-10-14T09:20:00Z",
             "languageISOCode": "EN",
             "primaryLanguageISOCode": "EN",
             "countryISOCode": "US",
@@ -71,7 +72,14 @@
                             "name": "ACCOUNT_DETAILS",
                             "container": [
                                 "bank",
+                                "investment",
                                 "creditCard"
+                            ]
+                        },
+                        {
+                            "name": "HOLDINGS",
+                            "container": [
+                                "investment"
                             ]
                         },
                         {
@@ -86,12 +94,16 @@
                                 "BANK": {
                                     "numberOfTransactionDays": 90
                                 },
+                                "INVESTMENT": {
+                                    "numberOfTransactionDays": 90
+                                },
                                 "CREDITCARD": {
                                     "numberOfTransactionDays": 90
                                 }
                             },
                             "container": [
                                 "bank",
+                                "investment",
                                 "creditCard"
                             ]
                         },
@@ -99,30 +111,8 @@
                             "name": "BASIC_ACCOUNT_INFO",
                             "container": [
                                 "bank",
+                                "investment",
                                 "creditCard"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "ACCT_PROFILE",
-                    "attribute": [
-                        {
-                            "name": "FULL_ACCT_NUMBER",
-                            "container": [
-                                "bank"
-                            ]
-                        },
-                        {
-                            "name": "BANK_TRANSFER_CODE",
-                            "container": [
-                                "bank"
-                            ]
-                        },
-                        {
-                            "name": "HOLDER_NAME",
-                            "container": [
-                                "bank"
                             ]
                         }
                     ]

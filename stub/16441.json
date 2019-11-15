@@ -8,9 +8,10 @@
             "favicon": "https://yodlee-1.hs.llnwd.net/v1/FAVICON/FAV_16441.PNG",
             "logo": "https://yodlee-1.hs.llnwd.net/v1/LOGO/LOGO_16441_1_1.PNG",
             "status": "Supported",
+            "isConsentRequired": false,
             "isAutoRefreshEnabled": true,
             "authType": "CREDENTIALS",
-            "lastModified": "2018-11-30T09:37:03Z",
+            "lastModified": "2019-11-08T07:46:25Z",
             "languageISOCode": "EN",
             "primaryLanguageISOCode": "EN",
             "countryISOCode": "US",
@@ -55,37 +56,77 @@
                     ]
                 }
             ],
+            "capability": [
+                {
+                    "name": "CHALLENGE_DEPOSIT_VERIFICATION",
+                    "container": [
+                        "bank"
+                    ]
+                }
+            ],
             "dataset": [
                 {
                     "name": "BASIC_AGG_DATA",
                     "attribute": [
                         {
+                            "name": "ACCOUNT_DETAILS",
+                            "container": [
+                                "bank",
+                                "loan",
+                                "investment",
+                                "creditCard"
+                            ]
+                        },
+                        {
+                            "name": "HOLDINGS",
+                            "container": [
+                                "insurance",
+                                "investment"
+                            ]
+                        },
+                        {
+                            "name": "STATEMENTS",
+                            "container": [
+                                "insurance",
+                                "loan",
+                                "bill",
+                                "creditCard"
+                            ]
+                        },
+                        {
+                            "name": "TRANSACTIONS",
+                            "containerAttributes": {
+                                "INSURANCE": {
+                                    "numberOfTransactionDays": 90
+                                },
+                                "BANK": {
+                                    "numberOfTransactionDays": 90
+                                },
+                                "LOAN": {
+                                    "numberOfTransactionDays": 90
+                                },
+                                "INVESTMENT": {
+                                    "numberOfTransactionDays": 90
+                                },
+                                "CREDITCARD": {
+                                    "numberOfTransactionDays": 90
+                                }
+                            },
+                            "container": [
+                                "insurance",
+                                "bank",
+                                "loan",
+                                "investment",
+                                "creditCard"
+                            ]
+                        },
+                        {
                             "name": "BASIC_ACCOUNT_INFO",
                             "container": [
-                                "bank"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "ACCT_PROFILE",
-                    "attribute": [
-                        {
-                            "name": "FULL_ACCT_NUMBER",
-                            "container": [
-                                "bank"
-                            ]
-                        },
-                        {
-                            "name": "BANK_TRANSFER_CODE",
-                            "container": [
-                                "bank"
-                            ]
-                        },
-                        {
-                            "name": "HOLDER_NAME",
-                            "container": [
-                                "bank"
+                                "bank",
+                                "loan",
+                                "investment",
+                                "creditCard"
                             ]
                         }
                     ]
