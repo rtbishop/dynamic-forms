@@ -74,8 +74,8 @@
             <div class="col-sm">
                 <p>GET /providers/{{ provider.id }}</p>
                 <p class="small-text">Response:</p>
-                <button type="button" class="btn btn-light btn-sm float-right">Copy</button>
-                <textarea class="form-control provider-json"> {{ json }} </textarea>
+                <button type="button" class="btn btn-light btn-sm float-right" onclick="copyToClipboard('get-provider-response')">Copy</button>
+                <textarea id="get-provider-response" class="form-control provider-json"> {{ json }} </textarea>
             </div>
         </div>
     </div>
@@ -97,8 +97,8 @@
             <div class="col-sm">
                 <p>POST /providerAccounts?providerId={{ provider.id }}</p>
                 <p class="small-text">Body:</p>
-                <button type="button" class="btn btn-light btn-sm float-right">Copy</button>
-                <textarea class="form-control provider-json-lg">{ "loginForm": {{ loginForm }} }</textarea>
+                <button type="button" class="btn btn-light btn-sm float-right" onclick="copyToClipboard('login-form-request')">Copy</button>
+                <textarea id="login-form-request" class="form-control provider-json-lg">{ "loginForm": {{ loginForm }} }</textarea>
             </div>
         </div>
     </div>
@@ -124,8 +124,8 @@
                 <p>GET /providerAccounts/<span class="mark" style="background-color: #f7ff00">:providerAccountId</span></p>
                 <p>In the previous page, you have taken the first step to log the user into their financial institution. Now you will now need to poll the endpoint above using the user's unique provider account ID to monitor the status of their login attempt. If the financial institution triggers MFA questions, the user will have a login status of USER_INPUT_REQUIRED as they will need to answer the questions.</p>
                 <p>Here is a sample response of the providerAccount payload you will receive for {{ mfa.name }}:</p>
-                <button type="button" class="btn btn-light btn-sm float-right">Copy</button>
-                <textarea class="form-control provider-json-md">{{ mfaJSON }}</textarea>
+                <button type="button" class="btn btn-light btn-sm float-right" onclick="copyToClipboard('poll-status-response')">Copy</button>
+                <textarea id="poll-status-response" class="form-control provider-json-md">{{ mfaJSON }}</textarea>
                 <p class="mt-4">Within this payload, you will see that there is a loginForm object. You will need to present this additional login form to the user so they can answer their MFA question(s). Please proceed to the Next Step: MFA Questions to see how to do this.</p>
             </div>
         </div>
@@ -159,8 +159,8 @@
             <div class="col-sm">
                 <!-- <p>GET /providerAccounts/:providerAccountId</p>
                 <p class="small-text">Response:</p> -->
-                <button type="button" class="btn btn-light btn-sm float-right">Copy</button>
-                <textarea class="form-control provider-json-lg">{ "loginForm": {{ mfaLoginForm }} }</textarea>
+                <button type="button" class="btn btn-light btn-sm float-right" onclick="copyToClipboard('mfa-questions-response')">Copy</button>
+                <textarea id="mfa-questions-response" class="form-control provider-json-lg">{ "loginForm": {{ mfaLoginForm }} }</textarea>
             </div>
         </div>
     </div>
@@ -182,11 +182,11 @@
             <div class="col-sm">
                 <p>PUT /providerAccounts?providerAccountIds=<span class="mark" style="background-color: #f7ff00">:providerAccountId</span></p>
                 <p class="small-text">Body:</p>
-                <button type="button" class="btn btn-light btn-sm float-right">Copy</button>
-                <textarea class="form-control provider-json">{ "loginForm": {{ mfaLoginForm }} }</textarea>
+                <button type="button" class="btn btn-light btn-sm float-right" onclick="copyToClipboard('mfa-questions-request')">Copy</button>
+                <textarea id="mfa-questions-request" class="form-control provider-json">{ "loginForm": {{ mfaLoginForm }} }</textarea>
                 <p class="mt-4 small-text">Sample Response:</p>
-                <button type="button" class="btn btn-light btn-sm float-right">Copy</button>
-                <textarea class="form-control provider-json-sm">{"providerAccount":[{"id":1000000,"aggregationSource":"USER","status":"LOGIN_IN_PROGRESS","requestId":"POxWLkF/TB0nQyA3NlOr2NSBje0=","dataset":[{"name":"ACCT_PROFILE","updateEligibility":"DISALLOW_UPDATE"}]}]}</textarea>
+                <button type="button" class="btn btn-light btn-sm float-right" onclick="copyToClipboard('mfa-questions-response2')">Copy</button>
+                <textarea id="mfa-questions-response2" class="form-control provider-json-sm">{"providerAccount":[{"id":1000000,"aggregationSource":"USER","status":"LOGIN_IN_PROGRESS","requestId":"POxWLkF/TB0nQyA3NlOr2NSBje0=","dataset":[{"name":"ACCT_PROFILE","updateEligibility":"DISALLOW_UPDATE"}]}]}</textarea>
             </div>
         </div>
     </div>
@@ -214,8 +214,8 @@
                     <li>USER_INPUT_REQUIRED</li>
                 </ul>
                 <p>If the status is either success or failed, you may stop polling since the MFA login process has ended and the user will either continue their aggregation/verification journey, or choose another site to login to. Here is a sample response of a successful login:</p>
-                <button type="button" class="btn btn-light btn-sm float-right">Copy</button>
-                <textarea class="form-control provider-json-md">{"providerAccount":[{"id":1000000,"aggregationSource":"USER","providerId":10000,"isManual":false,"createdDate":"2018-12-26T07:05:44Z","status":"SUCCESS","dataset":[{"name":"ACCT_PROFILE","additionalStatus":"AVAILABLE_DATA_RETRIEVED","updateEligibility":"ALLOW_UPDATE","lastUpdated":"2018-12-26T07:06:13Z","lastUpdateAttempt":"2018-12-26T07:06:13Z"}]}]}</textarea>
+                <button type="button" class="btn btn-light btn-sm float-right" onclick="copyToClipboard('mfa-login-status-poll-response')">Copy</button>
+                <textarea id="mfa-login-status-poll-response" class="form-control provider-json-md">{"providerAccount":[{"id":1000000,"aggregationSource":"USER","providerId":10000,"isManual":false,"createdDate":"2018-12-26T07:05:44Z","status":"SUCCESS","dataset":[{"name":"ACCT_PROFILE","additionalStatus":"AVAILABLE_DATA_RETRIEVED","updateEligibility":"ALLOW_UPDATE","lastUpdated":"2018-12-26T07:06:13Z","lastUpdateAttempt":"2018-12-26T07:06:13Z"}]}]}</textarea>
                 <p class="mt-4">If the status is still USER_INPUT_REQUIRED, this means that polling should continue because the financial institution has another round of MFA questions that need to be answered. You will need to display the new MFA questions to the user just as before and answer them with the same API endpoint as on the previous page.</p>
             </div>
         </div>
@@ -234,6 +234,13 @@ var mfaObj = {
     "dropdown": { "providerId": 16442, "name": "Multi-Level Drop-Down", "credentials": "mfa_demo.site16442.1" },
     "radio": { "providerId": 16442, "name": "Multi-Level Radio Button", "credentials": "mfa_demo.site16442.2" },
 };
+
+function copyToClipboard(elementId) {
+    var copyText = document.getElementById(elementId);
+    copyText.select();
+    document.execCommand("copy");
+}
+
 var app = new Vue({
     el: "#app",
     data: {
