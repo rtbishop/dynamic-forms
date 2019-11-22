@@ -139,6 +139,20 @@ function copyToClipboard(elementId) {
     document.execCommand("copy");
 }
 
+function hideShow(element, container) {
+    container = container + '-hidden';
+    var containerElements = document.getElementById(container).getElementsByTagName("input");
+    for(let i = 0; i < containerElements.length; i++) {
+        if(containerElements[i].id.includes(element)) {
+            containerElements[i].style.display = 'inline-block';    
+        }
+        else {
+            containerElements[i].style.display = 'none';
+        }
+    }
+    var elements = document.querySelectorAll('[id^='+element+'-]');
+}
+
 var app = new Vue({
     el: "#app",
     data: {
